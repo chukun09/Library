@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MuonTraController">
+                     <children>
+                        <TableView fx:id="tableMuonTra" layoutX="-2.0" layoutY="336.0" onMouseClicked="#getSelected" prefHeight="744.0" prefWidth="1920.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="MaMuonTra" prefWidth="126.0" text="Mã Mượn Trả" />
+                              <TableColumn fx:id="MaNhanVien" prefWidth="161.0" text="Mã Nhân Viên" />
+                              <TableColumn fx:id="NgayMuon" prefWidth="247.0" text="Ngày Mượn" />
+                              <TableColumn fx:id="NgayHenTra" minWidth="0.0" prefWidth="269.0" text="Ngày Hẹn Trả" />
+                              <TableColumn fx:id="MaDocGia" minWidth="0.0" prefWidth="241.0" text="Mã Độc Giả" />
+                              <TableColumn fx:id="MaSach" minWidth="0.0" prefWidth="254.0" text="Mã Sách" />
+            				<TableColumn fx:id="NgayTra" prefWidth="189.0" text="Ngày Trả" />
+            <TableColumn fx:id="GhiChu" minWidth="0.0" prefWidth="256.0" text="Ghi Chú" />
+            <TableColumn fx:id="TienPhat" maxWidth="176.0" prefWidth="176.0" text="Tiền Phạt" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="492.0" layoutY="85.0" prefHeight="29.0" prefWidth="137.0" text="Ngày Mượn :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="469.0" layoutY="143.0" prefHeight="29.0" prefWidth="183.0" text="Ngày Hẹn Trả :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1092.0" layoutY="89.0" text="Mã Độc Giả :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1126.0" layoutY="141.0" prefHeight="34.0" prefWidth="112.0" text="Mã Sách :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+                        </Label>
+                        <Button fx:id="btn_reset" layoutX="920.0" layoutY="196.0" mnemonicParsing="false" onAction="#Reset" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: orange;" stylesheets="@application.css" text="Refresh" textFill="WHITE" />
+                        <Button fx:id="btn_delete" layoutX="1677.0" layoutY="196.0" mnemonicParsing="false" onAction="#Delete" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: gray;" stylesheets="@application.css" text="Delete" textFill="WHITE" />
+                        <Button fx:id="btn_change" layoutX="469.0" layoutY="196.0" mnemonicParsing="false" onAction="#Edit" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: red;" styleClass="application.css" stylesheets="@application.css" text="Update" textFill="WHITE" />
+                        <Button fx:id="btn_add" layoutX="58.0" layoutY="196.0" mnemonicParsing="false" onAction="#Add" prefHeight="66.0" prefWidth="170.0" style="-fx-background-color: green;" stylesheets="@application.css" text="Add" textFill="WHITE" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="567.0" layoutY="14.0" prefHeight="65.0" prefWidth="607.0" text="Quản Lý Mượn Trả" textAlignment="CENTER" textFill="#000cff">
+                           <font>
+                              <Font name="Times New Roman Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="85.0" prefHeight="29.0" prefWidth="170.0" text="Mã Mượn Trả :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="143.0" prefHeight="29.0" prefWidth="204.0" text="Mã Nhân Viên :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtmamuontra" layoutX="177.0" layoutY="84.0" prefHeight="0.0" prefWidth="244.0" />
+                        <TextField fx:id="txt_find" layoutX="97.0" layoutY="288.0" prefHeight="38.0" prefWidth="571.0" promptText="Mời nhập thông tin cần tìm kiếm" />
+                        <Label layoutX="18.0" layoutY="297.0" text="Tìm Kiếm : ">
+                           <font>
+                              <Font name="Times New Roman" size="16.0" />
+                           </font>
+                        </Label>
+      <Label layoutX="1516.0" layoutY="89.0" text="Ngày Trả :">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1521.0" layoutY="144.0" text="Ghi Chú :">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtghichu" layoutX="1633.0" layoutY="142.0" prefHeight="0.0" prefWidth="244.0" />
+      <JFXButton layoutX="1282.0" layoutY="196.0" onAction="#Output" prefHeight="66.0" prefWidth="177.0" style="-fx-background-color: black;" text="Output file" textFill="#901212" />
+      <ComboBox fx:id="txtmanhanvien" editable="true" layoutX="177.0" layoutY="142.0" prefHeight="31.0" prefWidth="244.0" />
+      <ComboBox fx:id="txtdocgia" editable="true" layoutX="1239.0" layoutY="88.0" prefHeight="31.0" prefWidth="244.0" />
+      <ComboBox fx:id="txtmasach" editable="true" layoutX="1239.0" layoutY="143.0" prefHeight="31.0" prefWidth="244.0" />
+      <DatePicker fx:id="txtngaymuon" layoutX="637.0" layoutY="84.0" prefHeight="31.0" prefWidth="362.0" />
+      <DatePicker fx:id="txthentra" layoutX="637.0" layoutY="143.0" prefHeight="31.0" prefWidth="362.0" />
+      <DatePicker fx:id="txtngaytra" layoutX="1633.0" layoutY="88.0" prefHeight="31.0" prefWidth="244.0" />
+                     </children>
+</AnchorPane>

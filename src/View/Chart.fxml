@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllChart">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="847.0" prefHeight="57.0" prefWidth="227.0" text="Statistical">
+         <font>
+            <Font name="Times New Roman" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="78.0" text="Select Table :" />
+      <ChoiceBox fx:id="choiceboxtable" layoutX="153.0" layoutY="73.0" prefHeight="31.0" prefWidth="192.0" />
+      <ChoiceBox fx:id="choicebox1" layoutX="922.0" layoutY="73.0" prefHeight="31.0" prefWidth="192.0" />
+      <Label layoutX="799.0" layoutY="78.0" text="Select Column 1 :" />
+      <Label layoutX="1474.0" layoutY="78.0" text="Select Column 2 :" />
+      <ChoiceBox fx:id="choicebox2" layoutX="1601.0" layoutY="73.0" prefHeight="31.0" prefWidth="192.0" />
+      <Button layoutX="951.0" layoutY="131.0" mnemonicParsing="false" onAction="#Submit" prefHeight="47.0" prefWidth="134.0" style="-fx-background-color: Green;" text="Submit" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+      <BarChart fx:id="SachChart" layoutY="178.0" prefHeight="790.0" prefWidth="1920.0">
+        <xAxis>
+          <CategoryAxis fx:id="axisc" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="axisn" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1080" prefWidth="1920" style="-fx-background-image: url(&quot;file:///C:/Users/DELL/eclipse-workspace/Library/src/View/anhnendep.jpg&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Main">
+   <children>
+      <TextField fx:id="txttdn" layoutX="766.0" layoutY="410.0" prefHeight="49.0" prefWidth="391.0" promptText="Tên Đăng Nhập" style="-fx-border-color: white;" />
+      <Label alignment="CENTER" layoutX="813.0" layoutY="291.0" prefHeight="64.0" prefWidth="298.0" text="LOGIN HERE" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnlogin" defaultButton="true" layoutX="860.0" layoutY="625.0" mnemonicParsing="false" onAction="#Login" prefHeight="55.0" prefWidth="201.0" style="-fx-background-color: #FF3399; -fx-border-radius: 5px;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="1017.0" layoutY="580.0" text="Forgot Password ?" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label text="Label" />
+      <Label layoutX="683.0" layoutY="928.0" prefHeight="30.0" prefWidth="558.0" text="\@ 2020 Login Form. From Bách Khoa With Love | Design by F5.Ngáo" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label text="Label" />
+      <Label alignment="CENTER" layoutX="737.0" layoutY="95.0" prefHeight="54.0" prefWidth="503.0" text="Welcome to My Library" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="580.0" onMouseClicked="#Register" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Italic" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtmk" layoutX="767.0" layoutY="508.0" prefHeight="49.0" prefWidth="391.0" promptText="Mật Khẩu" style="-fx-border-color: white;" />
+   </children>
+</AnchorPane>

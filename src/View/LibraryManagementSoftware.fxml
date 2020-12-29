@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <TabPane fx:id="tabpane" layoutY="7.0" prefHeight="1080" prefWidth="1920" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Quản Lý Sách">
+               <content>
+                  <fx:include fx:id="tableviewsach" source="TableViewBook.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Quản Lý Độc Giả">
+               <content>
+                  <fx:include fx:id="tableviewdocgia" source="TableViewDocGia.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="qlmt" text="Quản Lý Mượn Trả">
+               <content>
+                  <fx:include fx:id="tableviewmuontra" source="TableViewMuonTra.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Quản Lý Nhân Viên">
+               <content>
+                  <fx:include fx:id="tableviewnhanvien" source="TableViewNhanVien.fxml" />
+               </content>
+            </Tab>
+           	<Tab text="Thống Kê">
+               <content>
+                  <fx:include fx:id="tableviewChart" source="Chart.fxml" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

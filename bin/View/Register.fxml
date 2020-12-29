@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="579.0" prefWidth="553.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Main">
+   <children>
+      <Label alignment="CENTER" layoutX="206.0" layoutY="82.0" text="Register" textAlignment="CENTER" textFill="#0092ff">
+         <font>
+            <Font name="Times New Roman Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="203.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="290.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="373.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnregister" alignment="CENTER" layoutX="349.0" layoutY="445.0" mnemonicParsing="false" onAction="#Regis" prefHeight="0.0" prefWidth="143.0" style="-fx-background-color: #0092ff;" text="Register" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <JFXTextField fx:id="txtacc" layoutX="106.0" layoutY="199.0" prefHeight="31.0" prefWidth="344.0" promptText="Account" unFocusColor="#00b4fc">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font></JFXTextField>
+      <AnchorPane layoutY="-1.0" prefHeight="585.0" prefWidth="100.0" style="-fx-background-color: #0092ff;" />
+      <JFXPasswordField fx:id="txtpass" layoutX="104.0" layoutY="286.0" prefHeight="31.0" prefWidth="344.0" promptText="Password" unFocusColor="#00b4fc">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font></JFXPasswordField>
+      <JFXPasswordField fx:id="txtconfirm" layoutX="104.0" layoutY="369.0" prefHeight="31.0" prefWidth="344.0" promptText="Comfirm Password" unFocusColor="#00b4fc">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font></JFXPasswordField>
+      <CheckBox fx:id="checkbox" layoutX="106.0" layoutY="423.0" mnemonicParsing="false" text="I agree to the terms of use !">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

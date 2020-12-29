@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1025.0" prefWidth="1920.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TableViewSach">
+                     <children>
+                        <TableView fx:id="tableSach" layoutX="-2.0" layoutY="336.0" onMouseClicked="#getSelected" prefHeight="687.0" prefWidth="1920.0">
+                           <columns>
+                              <TableColumn fx:id="sttSach" prefWidth="75.0" text="STT" />
+                              <TableColumn fx:id="masach" prefWidth="212.0" text="Mã Sách" />
+                              <TableColumn fx:id="tensach" prefWidth="598.0" text="Tên Sách" />
+                              <TableColumn fx:id="tacgia" minWidth="0.0" prefWidth="361.0" text="Tác Giả" />
+                              <TableColumn fx:id="manxb" minWidth="0.0" prefWidth="267.0" text="Mã Nhà Xuất Bản" />
+                              <TableColumn fx:id="namxb" minWidth="0.0" prefWidth="208.0" text="Năm Xuất Bản" />
+            				<TableColumn fx:id="soluong" prefWidth="198.0" text="Số Lượng" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="482.0" layoutY="85.0" prefHeight="29.0" prefWidth="113.0" text="Tên Sách :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="493.0" layoutY="143.0" prefHeight="29.0" prefWidth="102.0" text="Tác Giả :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1074.0" layoutY="89.0" text="Nhà Xuất Bản :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1065.0" layoutY="141.0" prefHeight="34.0" prefWidth="175.0" text="Năm Xuất Bản :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_reset" layoutX="709.0" layoutY="196.0" mnemonicParsing="false" onAction="#Reset" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: orange;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font></Button>
+                        <Button fx:id="btn_deletebook" layoutX="1712.0" layoutY="196.0" mnemonicParsing="false" onAction="#Delete" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: gray;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font></Button>
+                        <Button fx:id="btn_changebook" layoutX="395.0" layoutY="196.0" mnemonicParsing="false" onAction="#Edit" prefHeight="59.0" prefWidth="175.0" style="-fx-background-color: red;" styleClass="application.css" stylesheets="@application.css" text="Update" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+                        <Button fx:id="btn_addbook" layoutX="67.0" layoutY="196.0" mnemonicParsing="false" onAction="#AddBook" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font></Button>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="683.0" layoutY="14.0" prefHeight="65.0" prefWidth="551.0" text="Quản Lý Sách" textAlignment="CENTER" textFill="#000cff">
+                           <font>
+                              <Font name="Times New Roman Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="76.0" layoutY="85.0" prefHeight="29.0" prefWidth="69.0" text="STT :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="143.0" text="Mã Sách :">
+                           <font>
+                              <Font name="Times New Roman" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSTT" layoutX="145.0" layoutY="84.0" prefHeight="0.0" prefWidth="244.0" />
+                        <TextField fx:id="txtMaSach" layoutX="145.0" layoutY="143.0" prefHeight="0.0" prefWidth="244.0" />
+                        <TextField fx:id="txtTenSach" layoutX="601.0" layoutY="84.0" prefHeight="31.0" prefWidth="359.0" />
+                        <TextField fx:id="txtTacGia" layoutX="600.0" layoutY="143.0" prefHeight="31.0" prefWidth="362.0" />
+                        <TextField fx:id="txtNamXB" layoutX="1238.0" layoutY="142.0" prefHeight="0.0" prefWidth="244.0" />
+                        <TextField fx:id="txtNXB" layoutX="1238.0" layoutY="84.0" prefHeight="0.0" prefWidth="244.0" />
+                        <TextField fx:id="txt_find" layoutX="97.0" layoutY="288.0" prefHeight="38.0" prefWidth="571.0" promptText="Mời nhập thông tin cần tìm kiếm" />
+                        <Label layoutX="18.0" layoutY="297.0" text="Tìm Kiếm : ">
+                           <font>
+                              <Font name="Times New Roman" size="16.0" />
+                           </font>
+                        </Label>
+      <Label layoutX="1523.0" layoutY="110.0" text="Số Lượng :">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSoLuong" layoutX="1644.0" layoutY="109.0" prefHeight="0.0" prefWidth="244.0" />
+      <Button fx:id="btnchoosefile" layoutX="1025.0" layoutY="196.0" mnemonicParsing="false" onAction="#filechoose" prefHeight="66.0" prefWidth="183.0" style="-fx-background-color: Blue;" text="Choose File" />
+      <Button fx:id="btnoutput" layoutX="1386.0" layoutY="196.0" mnemonicParsing="false" onAction="#Output" style="-fx-background-color: violet;" text="Output File" />
+                     </children>
+</AnchorPane>
